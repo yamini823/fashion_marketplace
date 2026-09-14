@@ -5,6 +5,9 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import SellerRegistration from './pages/SellerRegistration';
 import SellerDashboard from './pages/SellerDashboard';
+import SellerProducts from './pages/seller/SellerProducts';
+import AddProduct from './pages/seller/AddProduct';
+import EditProduct from './pages/seller/EditProduct';
 import { SellerPlaceholder } from './pages/SellerPlaceholders';
 import { PlaceholderPage } from './pages/Placeholders';
 
@@ -28,7 +31,9 @@ function App() {
         {/* Seller Routes */}
         <Route path="/seller/register" element={<SellerRegistration />} />
         <Route path="/seller/dashboard" element={<SellerDashboard />} />
-        <Route path="/seller/products" element={<SellerPlaceholder title="Products Management" />} />
+        <Route path="/seller/products" element={<SellerProducts />} />
+        <Route path="/seller/products/add" element={<AddProduct />} />
+        <Route path="/seller/products/edit/:id" element={<EditProduct />} />
         <Route path="/seller/orders" element={<SellerPlaceholder title="Orders Management" />} />
         <Route path="/seller/inventory" element={<SellerPlaceholder title="Inventory" />} />
         <Route path="/seller/store" element={<SellerPlaceholder title="Storefront Settings" />} />
