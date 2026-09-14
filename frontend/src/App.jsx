@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import { PlaceholderPage } from './pages/Placeholders';
 
 function App() {
@@ -15,7 +17,8 @@ function App() {
         <Route path="/creator/:id" element={<PlaceholderPage title="Creator Profile" />} />
         <Route path="/custom-order" element={<PlaceholderPage title="Custom Order" />} />
         <Route path="/about" element={<PlaceholderPage title="About Us" />} />
-        <Route path="/login" element={<PlaceholderPage title="Login / Signup" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/cart" element={<PlaceholderPage title="Shopping Cart" />} />
         <Route path="/wishlist" element={<PlaceholderPage title="Wishlist" />} />
         <Route path="/seller/register" element={<PlaceholderPage title="Become a Seller" />} />
