@@ -11,6 +11,17 @@ import EditProduct from './pages/seller/EditProduct';
 import { SellerPlaceholder } from './pages/SellerPlaceholders';
 import { PlaceholderPage } from './pages/Placeholders';
 
+// Admin Pages
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminSellers from './pages/admin/AdminSellers';
+import AdminSellerApplications from './pages/admin/AdminSellerApplications';
+import AdminProducts from './pages/admin/AdminProducts';
+import AdminProductApprovals from './pages/admin/AdminProductApprovals';
+import AdminCustomers from './pages/admin/AdminCustomers';
+import AdminOrders from './pages/admin/AdminOrders';
+import AdminCategories from './pages/admin/AdminCategories';
+import AdminSettings from './pages/admin/AdminSettings';
+
 function App() {
   return (
     <Router>
@@ -39,6 +50,17 @@ function App() {
         <Route path="/seller/store" element={<SellerPlaceholder title="Storefront Settings" />} />
         <Route path="/seller/profile" element={<SellerPlaceholder title="Creator Profile" />} />
         <Route path="/seller/settings" element={<SellerPlaceholder title="Settings" />} />
+        
+        {/* Admin Routes */}
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/sellers" element={<AdminSellers />} />
+        <Route path="/admin/sellers/applications" element={<AdminSellerApplications />} />
+        <Route path="/admin/products" element={<AdminProducts />} />
+        <Route path="/admin/products/pending" element={<AdminProductApprovals />} />
+        <Route path="/admin/customers" element={<AdminCustomers />} />
+        <Route path="/admin/orders" element={<AdminOrders />} />
+        <Route path="/admin/categories" element={<AdminCategories />} />
+        <Route path="/admin/settings" element={<AdminSettings />} />
         
         <Route path="*" element={<PlaceholderPage title="404 - Page Not Found" />} />
       </Routes>
