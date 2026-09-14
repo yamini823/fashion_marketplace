@@ -1,0 +1,2 @@
+export const BRAND_NAME = "YAMORA";
+export const BRAND_TAGLINE = "CRAFTED FOR YOUR STORY";
