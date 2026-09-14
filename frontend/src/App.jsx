@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import SellerRegistration from './pages/SellerRegistration';
+import SellerDashboard from './pages/SellerDashboard';
+import { SellerPlaceholder } from './pages/SellerPlaceholders';
 import { PlaceholderPage } from './pages/Placeholders';
 
 function App() {
@@ -22,7 +24,17 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/cart" element={<PlaceholderPage title="Shopping Cart" />} />
         <Route path="/wishlist" element={<PlaceholderPage title="Wishlist" />} />
+        
+        {/* Seller Routes */}
         <Route path="/seller/register" element={<SellerRegistration />} />
+        <Route path="/seller/dashboard" element={<SellerDashboard />} />
+        <Route path="/seller/products" element={<SellerPlaceholder title="Products Management" />} />
+        <Route path="/seller/orders" element={<SellerPlaceholder title="Orders Management" />} />
+        <Route path="/seller/inventory" element={<SellerPlaceholder title="Inventory" />} />
+        <Route path="/seller/store" element={<SellerPlaceholder title="Storefront Settings" />} />
+        <Route path="/seller/profile" element={<SellerPlaceholder title="Creator Profile" />} />
+        <Route path="/seller/settings" element={<SellerPlaceholder title="Settings" />} />
+        
         <Route path="*" element={<PlaceholderPage title="404 - Page Not Found" />} />
       </Routes>
     </Router>
